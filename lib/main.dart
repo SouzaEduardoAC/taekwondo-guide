@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:handoryu/widgets/CustomAppBar.dart';
 import 'package:handoryu/widgets/NavDrawer.dart';
 
 void main() => runApp(TaekwondoApp());
@@ -21,12 +22,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavDrawer(),
-      appBar: AppBar(
-        title: Text('Side menu'),
-      ),
-      body: Center(
-        child: Text('Side Menu Tutorial'),
-      ),
+      appBar: CustomAppBar(),
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          backgroundBlendMode: BlendMode.overlay,
+          image: DecorationImage(
+            image: AssetImage('assets/images/korea_taekwondo_flag.png'),
+            fit: BoxFit.scaleDown,
+          )
+        ),
+      )
     );
   }
 }

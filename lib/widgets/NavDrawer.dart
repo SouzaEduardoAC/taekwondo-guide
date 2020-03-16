@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:handoryu/main.dart';
+
+import 'MaengsePage.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -18,7 +21,20 @@ class NavDrawer extends StatelessWidget {
                     fit: BoxFit.fitWidth,
                     image: AssetImage('assets/images/Taekwondo-Korea-Martial-Arts.png'),
                 alignment: Alignment.bottomCenter)),
-
+          ),
+          ListTile(
+              leading: Icon(Icons.home),
+              title: Text(
+                'Home',
+                style: TextStyle(fontSize: 18),),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => new HomePage()
+                    )
+                );
+              }
           ),
           ListTile(
             leading: Icon(Icons.format_strikethrough),
@@ -38,7 +54,7 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.format_list_numbered),
             title: Text(
-                'Pumsae',
+                'Pumse',
                 style: TextStyle(fontSize: 18)
             ),
             onTap: () => { }
@@ -53,7 +69,7 @@ class NavDrawer extends StatelessWidget {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (BuildContext context) => new MaengsePage();
+                    builder: (BuildContext context) => new MaengsePage()
                   )
                 );
               }
