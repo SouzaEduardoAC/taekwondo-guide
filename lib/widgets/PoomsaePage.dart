@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:handoryu/widgets/VideoPlayer.dart';
 
 import 'CustomAppBar.dart';
 import 'NavDrawer.dart';
@@ -48,9 +49,7 @@ class _PoomsaeBodyWidgetState extends State<PoomsaeBodyWidget> {
               title: Text(item.headerValue),
             );
           },
-          body: ListTile(
-              title: Text(item.expandedValue),
-              ),
+          body: item.expandedValue,
           isExpanded: item.isExpanded,
         );
       }).toList(),
@@ -65,7 +64,7 @@ class Item {
     this.isExpanded = false,
   });
 
-  String expandedValue;
+  Widget expandedValue;
   String headerValue;
   bool isExpanded;
 }
@@ -74,35 +73,35 @@ List<Item> generatePoomsaeList() {
   return [
     Item(
         headerValue: 'Taeguk Il Jang',
-        expandedValue: 'Videozin'
+        expandedValue: VideoPlayerScreen()
     ),
     Item(
         headerValue: 'Taeguk Yi Jang',
-        expandedValue: 'Videozin'
+        expandedValue: Text('')
     ),
     Item(
         headerValue: 'Taeguk Sam Jang',
-        expandedValue: 'Videozin'
+        expandedValue: Text('')
     ),
     Item(
         headerValue: 'Taeguk Sa Jang',
-        expandedValue: 'Videozin'
+        expandedValue: Text('')
     ),
     Item(
         headerValue: 'Taeguk Oh Jang',
-        expandedValue: 'Videozin'
+        expandedValue: Text('')
     ),
     Item(
         headerValue: 'Taeguk Yook Jang',
-        expandedValue: 'Videozin'
+        expandedValue: Text('')
     ),
     Item(
         headerValue: 'Taeguk Chil Jang',
-        expandedValue: 'Videozin'
+        expandedValue: Text('')
     ),
     Item(
         headerValue: 'Taeguk Pal Jang',
-        expandedValue: 'Videozin'
+        expandedValue: Text('')
     ),
   ];
 }

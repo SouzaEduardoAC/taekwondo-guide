@@ -89,6 +89,17 @@ class NavDrawer extends StatelessWidget {
                   )
                 );
               }
+          ),
+          ListTile(
+            title: Text('Test', style: TextStyle(fontSize: 18),),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => new VideoPlayerScreen()
+                )
+              );
+            }
           )
         ],
       ),
