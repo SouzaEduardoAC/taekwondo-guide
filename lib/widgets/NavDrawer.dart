@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:handoryu/main.dart';
+import 'package:handoryu/widgets/PoomsaePage.dart';
+import 'package:handoryu/widgets/VideoPlayer.dart';
 
 import 'MaengsePage.dart';
 
@@ -41,7 +43,14 @@ class NavDrawer extends StatelessWidget {
             title: Text(
               'Son ki sul',
               style: TextStyle(fontSize: 18),),
-            onTap: () => { }
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => new VideoPlayerScreen()
+                )
+              );
+            }
           ),
           ListTile(
             leading: Icon(Icons.format_strikethrough),
@@ -54,10 +63,17 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.format_list_numbered),
             title: Text(
-                'Pumse',
+                'Poomsae',
                 style: TextStyle(fontSize: 18)
             ),
-            onTap: () => { }
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => new PoonsaePage()
+                )
+              );
+            }
           ),
           ListTile(
               leading: Icon(Icons.local_library),

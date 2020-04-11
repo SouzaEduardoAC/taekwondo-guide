@@ -19,34 +19,41 @@ class MaengsePage extends StatelessWidget {
   Widget _buildMangse(BuildContext context) {
     return ListView(
       children: <Widget>[
-        ListTile(
-          title: Text(
-            'Observar as regras do Taekwondo',
-            style: _biggerFont,
+        Card(
+          child: ListTile(
+            title: Text(
+              'Observar as regras do Taekwondo',
+              style: _biggerFont,
+            ),
           ),
         ),
-        ListTile(
-          title: Text(
-            'Respeitar instrutores e superiores',
-            style: _biggerFont,
+        Card(
+          child: ListTile(
+            title: Text(
+              'Respeitar instrutores e superiores',
+              style: _biggerFont,
+            ),
+          )
+        ),
+        Card(
+          child: ListTile(
+              title: Text(
+                'Nunca fazer mal uso do Taekwondo',
+                style: _biggerFont,
+              ),
+            )
+        ),
+        Card(
+          child: ListTile(
+            title: Text('Construir um mundo mais pacífico', style: _biggerFont,),
           ),
         ),
-        ListTile(
-          title: Text(
-            'Nunca fazer mal uso do Taekwondo',
-            style: _biggerFont,
-          ),
-        ),
-        ListTile(
-          title: Text(
-            'Construir um mundo mais pacífico',
-            style: _biggerFont,
-          ),
-        ),
-        ListTile(
-          title: Text(
-            'Ser campeão da liberdade e da justiça',
-            style: _biggerFont,
+        Card(
+          child: ListTile(
+            title: Text(
+              'Ser campeão da liberdade e da justiça',
+              style: _biggerFont,
+            ),
           ),
         )
       ],
