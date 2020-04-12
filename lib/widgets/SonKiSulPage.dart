@@ -17,11 +17,11 @@ class SonKiSulPage extends StatelessWidget {
   Widget _buildListView(BuildContext context) {
     return ListView(
       children: <Widget>[
-        _buildCard('Tuit kubi sonnal makkô, Ap Kubi Pyõng Sonkut Seuõ Tchirugui'),
-        _buildCard('Respeitar instrutores e superiores'),
-        _buildCard('Nunca fazer mal uso do Taekwondo'),
-        _buildCard('Construir um mundo mais pacífico'),
-        _buildCard('Ser campeão da liberdade e da justiça')
+        _buildCard('Tuit kubi sonnal makkô\nAp Kubi Pyõng Sonkut Seuô Tchirugui'),
+        _buildCard('Ap kubi jebipfum mok tchigô\nAp sogui momtong barô tchirugui'),
+        _buildCard('Ap kubi momtong makkô\nDubom tchirugui'),
+        _buildCard('Tuit kubi dung palmõk momtong makkô\nTorá\nTuit kubidung jumok olgul pakat tchigui'),
+        _buildCard('Tuit kubi mit palmõk momtong makkô\nTchutchum sogui momtong yop tchirugui')
       ],
     );
   }
