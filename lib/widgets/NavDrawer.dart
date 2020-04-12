@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:handoryu/main.dart';
+import 'package:handoryu/widgets/HomePage.dart';
+import 'package:handoryu/widgets/MaengsePage.dart';
 import 'package:handoryu/widgets/PoomsaePage.dart';
-
-import 'MaengsePage.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -10,68 +9,26 @@ class NavDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: <Widget>[
-          ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Home', style: TextStyle(fontSize: 18)),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => new HomePage()
-                    )
-                );
-              }
-          ),
-          ListTile(
-            leading: Icon(Icons.format_strikethrough),
-            title: Text('Son ki sul', style: TextStyle(fontSize: 18)),
-            onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (BuildContext context) => new HomePage()
-                )
-              );
-            }
-          ),
-          ListTile(
-            leading: Icon(Icons.format_strikethrough),
-            title: Text('Bal ki sul', style: TextStyle(fontSize: 18)),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => new HomePage()
-                    )
-                );
-              }
-          ),
-          ListTile(
-            leading: Icon(Icons.format_list_numbered),
-            title: Text('Poomsae', style: TextStyle(fontSize: 18)),
-            onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (BuildContext context) => new PoomsaePage()
-                )
-              );
-            }
-          ),
-          ListTile(
-              leading: Icon(Icons.local_library),
-              title: Text('Maengse', style: TextStyle(fontSize: 18)),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (BuildContext context) => new MaengsePage()
-                  )
-                );
-              }
-          )
+          _buildListTile(context, Icons.home, 'Home', new HomePage()),
+          _buildListTile(context, Icons.format_strikethrough, 'Bal ki sul', new HomePage()),
+          _buildListTile(context, Icons.format_strikethrough, 'Son ki sul', new HomePage()),
+          _buildListTile(context, Icons.format_list_numbered, 'Poomsae', new PoomsaePage()),
+          _buildListTile(context, Icons.local_library, 'Maengse', new MaengsePage())
         ],
       ),
+    );
+  }
+
+  ListTile _buildListTile(context, icon, title, page) {
+    return ListTile(
+      leading: Icon(icon),
+      title: Text(title, style: TextStyle(fontSize: 18)),
+      onTap: () {
+        Navigator.of(context).pop();
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (BuildContext context) => page)
+        );
+      }
     );
   }
 }

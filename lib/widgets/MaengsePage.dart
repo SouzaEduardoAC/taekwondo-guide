@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'CustomAppBar.dart';
-import 'NavDrawer.dart';
+import 'package:handoryu/widgets/CustomAppBar.dart';
+import 'package:handoryu/widgets/NavDrawer.dart';
 
 class MaengsePage extends StatelessWidget {
   final _biggerFont = const TextStyle(fontSize: 18.0);
@@ -19,44 +18,15 @@ class MaengsePage extends StatelessWidget {
   Widget _buildMangse(BuildContext context) {
     return ListView(
       children: <Widget>[
-        Card(
-          child: ListTile(
-            title: Text(
-              'Observar as regras do Taekwondo',
-              style: _biggerFont,
-            ),
-          ),
-        ),
-        Card(
-          child: ListTile(
-            title: Text(
-              'Respeitar instrutores e superiores',
-              style: _biggerFont,
-            ),
-          )
-        ),
-        Card(
-          child: ListTile(
-              title: Text(
-                'Nunca fazer mal uso do Taekwondo',
-                style: _biggerFont,
-              ),
-            )
-        ),
-        Card(
-          child: ListTile(
-            title: Text('Construir um mundo mais pacífico', style: _biggerFont,),
-          ),
-        ),
-        Card(
-          child: ListTile(
-            title: Text(
-              'Ser campeão da liberdade e da justiça',
-              style: _biggerFont,
-            ),
-          ),
-        )
+        _buildCard('Observar as regras do Taekwondo'),
+        _buildCard('Respeitar instrutores e superiores'),
+        _buildCard('Nunca fazer mal uso do Taekwondo'),
+        _buildCard('Construir um mundo mais pacífico'),
+        _buildCard('Ser campeão da liberdade e da justiça')
       ],
     );
   }
+
+  Card _buildCard(text) =>
+    Card(child: ListTile(title: Text(text, style: _biggerFont)));
 }

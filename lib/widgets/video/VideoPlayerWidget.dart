@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:handoryu/widgets/video/PlayPauseOverlay.dart';
 import 'package:video_player/video_player.dart';
-
-import 'PlayPauseOverlay.dart';
 
 class VideoPlayerWidget extends StatefulWidget {
   String assetVideoPath;

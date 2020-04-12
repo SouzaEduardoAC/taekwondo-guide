@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:handoryu/widgets/CustomAppBar.dart';
+import 'package:handoryu/widgets/NavDrawer.dart';
 import 'package:handoryu/widgets/video/PlayerVideoAndPopPage.dart';
-
-import 'CustomAppBar.dart';
-import 'NavDrawer.dart';
 
 class PoomsaePage extends StatelessWidget {
   @override
@@ -11,13 +10,13 @@ class PoomsaePage extends StatelessWidget {
     return Scaffold(
       drawer: NavDrawer(),
       appBar: CustomAppBar(),
-      body: PoomsaeBodyWidget(),
+      body: _PoomsaeBodyWidget(),
     );
   }
 }
 
-class PoomsaeBodyWidget extends StatelessWidget {
-  PoomsaeBodyWidget({Key key}) : super(key: key);
+class _PoomsaeBodyWidget extends StatelessWidget {
+  _PoomsaeBodyWidget({Key key}) : super(key: key);
   final _biggerFont = const TextStyle(fontSize: 18.0);
 
   final _taegukIlJang = 'assets/videos/1_taeguk_il_jang.mp4';
@@ -37,135 +36,30 @@ class PoomsaeBodyWidget extends StatelessWidget {
   Widget _buildPoomsaeList(context) {
     return ListView(
       children: <Widget>[
-        new GestureDetector(
-          child: Card(
-            child: ListTile(
-              title: Text('Taeguk Il Jang', style: _biggerFont),
-            ),
-          ),
-          onTap: () {
-            Navigator.push<PlayerVideoAndPopPage>(
-              context,
-              MaterialPageRoute<PlayerVideoAndPopPage>(
-                builder: (BuildContext context) =>
-                new PlayerVideoAndPopPage(_taegukIlJang),
-              ),
-            );
-          }
-        ),
-        new GestureDetector(
-            child: Card(
-              child: ListTile(
-                title: Text('Taeguk Ee Jang', style: _biggerFont),
-              ),
-            ),
-            onTap: () {
-              Navigator.push<PlayerVideoAndPopPage>(
-                context,
-                MaterialPageRoute<PlayerVideoAndPopPage>(
-                  builder: (BuildContext context) =>
-                  new PlayerVideoAndPopPage(_taegukEeJang),
-                ),
-              );
-            }
-        ),
-        new GestureDetector(
-            child: Card(
-              child: ListTile(
-                title: Text('Taeguk Sam Jang', style: _biggerFont),
-              ),
-            ),
-            onTap: () {
-              Navigator.push<PlayerVideoAndPopPage>(
-                context,
-                MaterialPageRoute<PlayerVideoAndPopPage>(
-                  builder: (BuildContext context) =>
-                  new PlayerVideoAndPopPage(_taegukSamJang),
-                ),
-              );
-            }
-        ),
-        new GestureDetector(
-            child: Card(
-              child: ListTile(
-                title: Text('Taeguk Sa Jang', style: _biggerFont),
-              ),
-            ),
-            onTap: () {
-              Navigator.push<PlayerVideoAndPopPage>(
-                context,
-                MaterialPageRoute<PlayerVideoAndPopPage>(
-                  builder: (BuildContext context) =>
-                  new PlayerVideoAndPopPage(_taegukSaJang),
-                ),
-              );
-            }
-        ),
-        new GestureDetector(
-            child: Card(
-              child: ListTile(
-                title: Text('Taeguk Oh Jang', style: _biggerFont),
-              ),
-            ),
-            onTap: () {
-              Navigator.push<PlayerVideoAndPopPage>(
-                context,
-                MaterialPageRoute<PlayerVideoAndPopPage>(
-                  builder: (BuildContext context) =>
-                  new PlayerVideoAndPopPage(_taegukOhJang),
-                ),
-              );
-            }
-        ),
-        new GestureDetector(
-            child: Card(
-              child: ListTile(
-                title: Text('Taeguk Yuk Jang', style: _biggerFont),
-              ),
-            ),
-            onTap: () {
-              Navigator.push<PlayerVideoAndPopPage>(
-                context,
-                MaterialPageRoute<PlayerVideoAndPopPage>(
-                  builder: (BuildContext context) =>
-                  new PlayerVideoAndPopPage(_taegukYukJang),
-                ),
-              );
-            }
-        ),
-        new GestureDetector(
-            child: Card(
-              child: ListTile(
-                title: Text('Taeguk Chil Jang', style: _biggerFont),
-              ),
-            ),
-            onTap: () {
-              Navigator.push<PlayerVideoAndPopPage>(
-                context,
-                MaterialPageRoute<PlayerVideoAndPopPage>(
-                  builder: (BuildContext context) =>
-                  new PlayerVideoAndPopPage(_taegukChilJang),
-                ),
-              );
-            }
-        ),
-        new GestureDetector(
-            child: Card(
-              child: ListTile(
-                title: Text('Taeguk Pal Jang', style: _biggerFont),
-              ),
-            ),
-            onTap: () {
-              Navigator.push<PlayerVideoAndPopPage>(
-                context,
-                MaterialPageRoute<PlayerVideoAndPopPage>(
-                  builder: (BuildContext context) =>
-                  new PlayerVideoAndPopPage(_taegukPalJang),
-                ),
-              );
-            }
-        ),
+        _buildCard(context, 'Taeguk Il Jang', _taegukIlJang),
+        _buildCard(context, 'Taeguk Ee Jang', _taegukEeJang),
+        _buildCard(context, 'Taeguk Sam Jang', _taegukSamJang),
+        _buildCard(context, 'Taeguk Sa Jang', _taegukSaJang),
+        _buildCard(context, 'Taeguk Oh Jang', _taegukOhJang),
+        _buildCard(context, 'Taeguk Yuk Jang', _taegukYukJang),
+        _buildCard(context, 'Taeguk Chil Jang', _taegukChilJang),
+        _buildCard(context, 'Taeguk Pal Jang', _taegukPalJang),
       ],
+    );
+  }
+
+  GestureDetector _buildCard(context, cardText, videoPath) {
+    return new GestureDetector(
+        child: Card(child: ListTile(title: Text(cardText, style: _biggerFont))),
+        onTap: () {
+          Navigator.push<PlayerVideoAndPopPage>(
+            context,
+            MaterialPageRoute<PlayerVideoAndPopPage>(
+              builder: (BuildContext context) =>
+              new PlayerVideoAndPopPage(videoPath),
+            ),
+          );
+        }
     );
   }
 }
