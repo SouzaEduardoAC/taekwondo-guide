@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:handoryu/widgets/HomePage.dart';
+import 'package:handoryu/pages/HomePage.dart';
 
 void main() => runApp(TaekwondoApp());
 

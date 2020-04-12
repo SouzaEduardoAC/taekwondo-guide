@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:handoryu/widgets/BalKiSulPage.dart';
-import 'package:handoryu/widgets/HomePage.dart';
-import 'package:handoryu/widgets/MaengsePage.dart';
-import 'package:handoryu/widgets/PoomsaePage.dart';
-import 'package:handoryu/widgets/SonKiSulPage.dart';
+import 'package:handoryu/pages/BalKiSulPage.dart';
+import 'package:handoryu/pages/HomePage.dart';
+import 'package:handoryu/pages/MaengsePage.dart';
+import 'package:handoryu/pages/PoomsaePage.dart';
+import 'package:handoryu/pages/SonKiSulPage.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
