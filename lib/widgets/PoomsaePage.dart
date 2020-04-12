@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:handoryu/widgets/VideoPlayer.dart';
+import 'package:handoryu/widgets/video/PlayerVideoAndPopPage.dart';
 
 import 'CustomAppBar.dart';
 import 'NavDrawer.dart';
 
-class PoonsaePage extends StatelessWidget {
+class PoomsaePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,92 +16,156 @@ class PoonsaePage extends StatelessWidget {
   }
 }
 
-class PoomsaeBodyWidget extends StatefulWidget {
+class PoomsaeBodyWidget extends StatelessWidget {
   PoomsaeBodyWidget({Key key}) : super(key: key);
+  final _biggerFont = const TextStyle(fontSize: 18.0);
 
-  @override
-  _PoomsaeBodyWidgetState createState() => _PoomsaeBodyWidgetState();
-}
+  final _taegukIlJang = 'assets/videos/1_taeguk_il_jang.mp4';
+  final _taegukEeJang = 'assets/videos/2_taeguk_yi_jang.mp4';
+  final _taegukSamJang = 'assets/videos/3_taeguk_sam_jang.mp4';
+  final _taegukSaJang = 'assets/videos/4_taeguk_sa_jang.mp4';
+  final _taegukOhJang = 'assets/videos/5_taeguk_oh_jang.mp4';
+  final _taegukYukJang = 'assets/videos/6_taeguk_yook_jang.mp4';
+  final _taegukChilJang = 'assets/videos/7_taeguk_chil_jang.mp4';
+  final _taegukPalJang = 'assets/videos/8_taeguk_pal_jang.mp4';
 
-class _PoomsaeBodyWidgetState extends State<PoomsaeBodyWidget> {
-  List<Item> _data = generatePoomsaeList();
-   
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        child: _buildPanel(),
-      ),
-    );
+    return _buildPoomsaeList(context);
   }
 
-  Widget _buildPanel() {
-    return ExpansionPanelList(
-      expansionCallback: (int index, bool isExpanded) {
-        setState(() {
-          _data[index].isExpanded = !isExpanded;
-        });
-      },
-      children: _data.map<ExpansionPanel>((Item item) {
-        return ExpansionPanel(
-          headerBuilder: (BuildContext context, bool isExpanded) {
-            return ListTile(
-              title: Text(item.headerValue),
+  Widget _buildPoomsaeList(context) {
+    return ListView(
+      children: <Widget>[
+        new GestureDetector(
+          child: Card(
+            child: ListTile(
+              title: Text('Taeguk Il Jang', style: _biggerFont),
+            ),
+          ),
+          onTap: () {
+            Navigator.push<PlayerVideoAndPopPage>(
+              context,
+              MaterialPageRoute<PlayerVideoAndPopPage>(
+                builder: (BuildContext context) =>
+                new PlayerVideoAndPopPage(_taegukIlJang),
+              ),
             );
-          },
-          body: item.expandedValue,
-          isExpanded: item.isExpanded,
-        );
-      }).toList(),
+          }
+        ),
+        new GestureDetector(
+            child: Card(
+              child: ListTile(
+                title: Text('Taeguk Ee Jang', style: _biggerFont),
+              ),
+            ),
+            onTap: () {
+              Navigator.push<PlayerVideoAndPopPage>(
+                context,
+                MaterialPageRoute<PlayerVideoAndPopPage>(
+                  builder: (BuildContext context) =>
+                  new PlayerVideoAndPopPage(_taegukEeJang),
+                ),
+              );
+            }
+        ),
+        new GestureDetector(
+            child: Card(
+              child: ListTile(
+                title: Text('Taeguk Sam Jang', style: _biggerFont),
+              ),
+            ),
+            onTap: () {
+              Navigator.push<PlayerVideoAndPopPage>(
+                context,
+                MaterialPageRoute<PlayerVideoAndPopPage>(
+                  builder: (BuildContext context) =>
+                  new PlayerVideoAndPopPage(_taegukSamJang),
+                ),
+              );
+            }
+        ),
+        new GestureDetector(
+            child: Card(
+              child: ListTile(
+                title: Text('Taeguk Sa Jang', style: _biggerFont),
+              ),
+            ),
+            onTap: () {
+              Navigator.push<PlayerVideoAndPopPage>(
+                context,
+                MaterialPageRoute<PlayerVideoAndPopPage>(
+                  builder: (BuildContext context) =>
+                  new PlayerVideoAndPopPage(_taegukSaJang),
+                ),
+              );
+            }
+        ),
+        new GestureDetector(
+            child: Card(
+              child: ListTile(
+                title: Text('Taeguk Oh Jang', style: _biggerFont),
+              ),
+            ),
+            onTap: () {
+              Navigator.push<PlayerVideoAndPopPage>(
+                context,
+                MaterialPageRoute<PlayerVideoAndPopPage>(
+                  builder: (BuildContext context) =>
+                  new PlayerVideoAndPopPage(_taegukOhJang),
+                ),
+              );
+            }
+        ),
+        new GestureDetector(
+            child: Card(
+              child: ListTile(
+                title: Text('Taeguk Yuk Jang', style: _biggerFont),
+              ),
+            ),
+            onTap: () {
+              Navigator.push<PlayerVideoAndPopPage>(
+                context,
+                MaterialPageRoute<PlayerVideoAndPopPage>(
+                  builder: (BuildContext context) =>
+                  new PlayerVideoAndPopPage(_taegukYukJang),
+                ),
+              );
+            }
+        ),
+        new GestureDetector(
+            child: Card(
+              child: ListTile(
+                title: Text('Taeguk Chil Jang', style: _biggerFont),
+              ),
+            ),
+            onTap: () {
+              Navigator.push<PlayerVideoAndPopPage>(
+                context,
+                MaterialPageRoute<PlayerVideoAndPopPage>(
+                  builder: (BuildContext context) =>
+                  new PlayerVideoAndPopPage(_taegukChilJang),
+                ),
+              );
+            }
+        ),
+        new GestureDetector(
+            child: Card(
+              child: ListTile(
+                title: Text('Taeguk Pal Jang', style: _biggerFont),
+              ),
+            ),
+            onTap: () {
+              Navigator.push<PlayerVideoAndPopPage>(
+                context,
+                MaterialPageRoute<PlayerVideoAndPopPage>(
+                  builder: (BuildContext context) =>
+                  new PlayerVideoAndPopPage(_taegukPalJang),
+                ),
+              );
+            }
+        ),
+      ],
     );
   }
-}
-
-class Item {
-  Item({
-    this.expandedValue,
-    this.headerValue,
-    this.isExpanded = false,
-  });
-
-  Widget expandedValue;
-  String headerValue;
-  bool isExpanded;
-}
-
-List<Item> generatePoomsaeList() {
-  return [
-    Item(
-        headerValue: 'Taeguk Il Jang',
-        expandedValue: VideoPlayerScreen()
-    ),
-    Item(
-        headerValue: 'Taeguk Yi Jang',
-        expandedValue: Text('')
-    ),
-    Item(
-        headerValue: 'Taeguk Sam Jang',
-        expandedValue: Text('')
-    ),
-    Item(
-        headerValue: 'Taeguk Sa Jang',
-        expandedValue: Text('')
-    ),
-    Item(
-        headerValue: 'Taeguk Oh Jang',
-        expandedValue: Text('')
-    ),
-    Item(
-        headerValue: 'Taeguk Yook Jang',
-        expandedValue: Text('')
-    ),
-    Item(
-        headerValue: 'Taeguk Chil Jang',
-        expandedValue: Text('')
-    ),
-    Item(
-        headerValue: 'Taeguk Pal Jang',
-        expandedValue: Text('')
-    ),
-  ];
 }
