@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:handoryu/widgets/CardBiggerFont.dart';
-import 'package:handoryu/widgets/CustomAppBar.dart';
-import 'package:handoryu/widgets/NavDrawer.dart';
+import 'package:taekwondoguide/widgets/CardBiggerFont.dart';
+import 'package:taekwondoguide/widgets/CustomAppBar.dart';
+import 'package:taekwondoguide/widgets/NavDrawer.dart';
 
-class BalKiSulPage extends StatelessWidget {
+class BalKiSul extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

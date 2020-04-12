@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:handoryu/widgets/CustomAppBar.dart';
-import 'package:handoryu/widgets/NavDrawer.dart';
-import 'package:handoryu/widgets/video/PlayerVideoAndPopPage.dart';
+import 'package:taekwondoguide/widgets/CustomAppBar.dart';
+import 'package:taekwondoguide/widgets/NavDrawer.dart';
+import 'package:taekwondoguide/widgets/PlayerVideoAndPop.dart';
 
-class PoomsaePage extends StatelessWidget {
+class Poomsae extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,11 +51,11 @@ class _PoomsaeBodyWidget extends StatelessWidget {
     return new GestureDetector(
         child: Card(child: ListTile(title: Text(cardText, style: _biggerFont))),
         onTap: () {
-          Navigator.push<PlayerVideoAndPopPage>(
+          Navigator.push<PlayerVideoAndPop>(
             context,
-            MaterialPageRoute<PlayerVideoAndPopPage>(
+            MaterialPageRoute<PlayerVideoAndPop>(
               builder: (BuildContext context) =>
-              new PlayerVideoAndPopPage(videoPath),
+              new PlayerVideoAndPop(videoPath),
             ),
           );
         }

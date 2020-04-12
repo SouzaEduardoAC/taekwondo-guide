@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CardBiggerFont extends StatelessWidget {
   final _biggerFont = const TextStyle(fontSize: 18.0);
@@ -9,5 +8,5 @@ class CardBiggerFont extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) =>
-    Card(child: ListTile(title: Text(_text, style: _biggerFont)));
+      Card(child: ListTile(title: Text(_text, style: _biggerFont)));
 }

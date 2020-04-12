@@ -1,16 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:handoryu/widgets/video/PlayPauseOverlay.dart';
 import 'package:video_player/video_player.dart';
 
-class PlayerVideoAndPopPage extends StatefulWidget {
+import 'PlayPauseOverlay.dart';
+
+class PlayerVideoAndPop extends StatefulWidget {
   String _videoPath;
-  PlayerVideoAndPopPage(this._videoPath);
+  PlayerVideoAndPop(this._videoPath);
   @override
   _PlayerVideoAndPopPageState createState() => _PlayerVideoAndPopPageState(_videoPath);
 }
 
-class _PlayerVideoAndPopPageState extends State<PlayerVideoAndPopPage> {
+class _PlayerVideoAndPopPageState extends State<PlayerVideoAndPop> {
   VideoPlayerController _videoPlayerController;
   bool startedPlaying = false;
   String _videoPath;
@@ -52,15 +52,15 @@ class _PlayerVideoAndPopPageState extends State<PlayerVideoAndPopPage> {
           builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
             if (snapshot.data == true) {
               return AspectRatio(
-                aspectRatio: _videoPlayerController.value.aspectRatio,
-                child: Stack(
-                  alignment: Alignment.bottomCenter,
-                  children: <Widget>[
-                    VideoPlayer(_videoPlayerController),
-                    PlayPauseOverlay(controller: _videoPlayerController),
-                    VideoProgressIndicator(_videoPlayerController, allowScrubbing: true),
-                  ],
-                )
+                  aspectRatio: _videoPlayerController.value.aspectRatio,
+                  child: Stack(
+                    alignment: Alignment.bottomCenter,
+                    children: <Widget>[
+                      VideoPlayer(_videoPlayerController),
+                      PlayPauseOverlay(controller: _videoPlayerController),
+                      VideoProgressIndicator(_videoPlayerController, allowScrubbing: true),
+                    ],
+                  )
               );
             } else {
               return const Text('waiting for video to load');

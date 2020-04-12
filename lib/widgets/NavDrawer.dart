@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:handoryu/pages/BalKiSulPage.dart';
-import 'package:handoryu/pages/HomePage.dart';
-import 'package:handoryu/pages/MaengsePage.dart';
-import 'package:handoryu/pages/PoomsaePage.dart';
-import 'package:handoryu/pages/SonKiSulPage.dart';
+import 'package:taekwondoguide/pages/BalKiSul.dart';
+import 'package:taekwondoguide/pages/Home.dart';
+import 'package:taekwondoguide/pages/Maengse.dart';
+import 'package:taekwondoguide/pages/Poomsae.dart';
+import 'package:taekwondoguide/pages/SonKiSul.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -11,11 +11,11 @@ class NavDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: <Widget>[
-          _buildListTile(context, Icons.home, 'Home', new HomePage()),
-          _buildListTile(context, Icons.format_strikethrough, 'Bal ki sul', new BalKiSulPage()),
-          _buildListTile(context, Icons.format_strikethrough, 'Son ki sul', new SonKiSulPage()),
-          _buildListTile(context, Icons.format_list_numbered, 'Poomsae', new PoomsaePage()),
-          _buildListTile(context, Icons.local_library, 'Maengse', new MaengsePage())
+          _buildListTile(context, Icons.home, 'Home', new Home()),
+          _buildListTile(context, Icons.format_strikethrough, 'Bal ki sul', new BalKiSul()),
+          _buildListTile(context, Icons.format_strikethrough, 'Son ki sul', new SonKiSul()),
+          _buildListTile(context, Icons.format_list_numbered, 'Poomsae', new Poomsae()),
+          _buildListTile(context, Icons.local_library, 'Maengse', new Maengse())
         ],
       ),
     );
@@ -23,14 +23,14 @@ class NavDrawer extends StatelessWidget {
 
   ListTile _buildListTile(context, icon, title, page) {
     return ListTile(
-      leading: Icon(icon),
-      title: Text(title, style: TextStyle(fontSize: 18)),
-      onTap: () {
-        Navigator.of(context).pop();
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (BuildContext context) => page)
-        );
-      }
+        leading: Icon(icon),
+        title: Text(title, style: TextStyle(fontSize: 18)),
+        onTap: () {
+          Navigator.of(context).pop();
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (BuildContext context) => page)
+          );
+        }
     );
   }
 }

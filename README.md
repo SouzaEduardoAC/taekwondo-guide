@@ -1,6 +1,6 @@
-# handoryu
+# taekwondoguide
 
-Handoryu taekwondo content into an app.
+The Taekwondo Guide.
 
 ## Getting Started
 

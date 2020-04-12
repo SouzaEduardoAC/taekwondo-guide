@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:handoryu/pages/HomePage.dart';
+import 'package:taekwondoguide/pages/Home.dart';
 
-void main() => runApp(TaekwondoApp());
+void main() => runApp(_TaekwondoGuide());
 
-class TaekwondoApp extends StatelessWidget {
+class _TaekwondoGuide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,7 +11,7 @@ class TaekwondoApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: Home(),
     );
   }
 }

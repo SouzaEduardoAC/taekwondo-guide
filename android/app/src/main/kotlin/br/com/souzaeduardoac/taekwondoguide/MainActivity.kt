@@ -1,4 +1,4 @@
-package br.com.souzaeduardoac.handoryu
+package br.com.souzaeduardoac.taekwondoguide
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
