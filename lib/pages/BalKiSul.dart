@@ -3,62 +3,61 @@ import 'package:taekwondoguide/pages/AbstractStructure.dart';
 import 'package:taekwondoguide/widgets/CardBiggerFont.dart';
 
 class BalKiSul extends AbstractStructure {
+  final _balKiSulMoves = [
+    'Murup olio tchigui',
+    'Murup dolio tchigui',
+    'Ap tchagui',
+    'Miro tchagui',
+    'Dolio tchagui',
+    'Bandal tchagui',
+    'Natchuo dolio tchagui',
+    'An tchagui',
+    'Pakat tchagui',
+    'Yop tchagui',
+    'Tuio nopi ap tchagui',
+    'Ap bal nakka tchagui',
+    'Tuit bal rurio tchagui',
+    'Ap bal nerio tchagui',
+    'Tuit bal podo tchagui',
+    'Kullo ap tchagui',
+    'Kullo an tchagui',
+    'Kullo yop tchagui',
+    'Kullo dolio tchagui',
+    'Kullo rurio tchagui',
+    'Kullo miro tchagui',
+    'Mondolio rurio tchagui',
+    'Natchuô mondolio rurio tchagui',
+    'Mondolio yop tchagui',
+    'Mondolio nêrio tchagui',
+    'On mondolio yop tchagui',
+    'On mondolio rurio tchagui',
+    'Ban mondolio nakka tchagui',
+    'Ban mondolio nerio tchagui',
+    'Ban mondolio yop tchagui',
+    'Tuit tchagui',
+    'Ap bal tuio ap tchagui',
+    'Ap bal tuio an tchagui',
+    'Ap bal tuio yop tchagui',
+    'Tuit bal tuio nagamiô rurio tchagui',
+    'Tuit bal tuio nagamiô dolio tchagui',
+    'Tuit bal tuio nagamiô yop tchagui',
+    'Banderô dolio tchagui',
+    'Banderô an tchagui',
+    'Dubal dansong an tchagui',
+    'Dubal dansong nerio tchagui',
+    'Dubal dansong dolio tchagui',
+    'Dubal dansong yop tchagui',
+    'Dubal dansong rurio tchagui',
+    'Tuio tuit tchagui',
+    'Tuio mon dolio nerio tchagui',
+    'Natchuô mon dolio rurio tchagi',
+    'Mondolio rurio tchagui'
+  ];
+
   Widget buildPageBody(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        // 10 GUB
-        CardBiggerFont('Murup olio tchigui'),
-        CardBiggerFont('Murup dolio tchigui'),
-        CardBiggerFont('Ap tchagui'),
-        CardBiggerFont('Miro tchagui'),
-        CardBiggerFont('Dolio tchagui'),
-        CardBiggerFont('Bandal tchagui'),
-        CardBiggerFont('Natchuo dolio tchagui'),
-        CardBiggerFont('An tchagui'),
-        CardBiggerFont('Pakat tchagui'),
-        CardBiggerFont('Yop tchagui'),
-        CardBiggerFont('Tuio nopi ap tchagui'),
-        // 9 GUB
-        CardBiggerFont('Ap bal nakka tchagui'),
-        CardBiggerFont('Tuit bal rurio tchagui'),
-        CardBiggerFont('Ap bal nerio tchagui'),
-        CardBiggerFont('Tuit bal podo tchagui'),
-        CardBiggerFont('Kullo ap tchagui'),
-        CardBiggerFont('Kullo an tchagui'),
-        CardBiggerFont('Kullo yop tchagui'),
-        CardBiggerFont('Kullo dolio tchagui'),
-        CardBiggerFont('Kullo rurio tchagui'),
-        CardBiggerFont('Kullo miro tchagui'),
-        // 8 GUB
-        CardBiggerFont('Mondolio rurio tchagui'),
-        CardBiggerFont('Natchuô mondolio rurio tchagui'),
-        CardBiggerFont('Mondolio yop tchagui'),
-        CardBiggerFont('Mondolio nêrio tchagui'),
-        CardBiggerFont('On mondolio yop tchagui'),
-        CardBiggerFont('On mondolio rurio tchagui'),
-        CardBiggerFont('Ban mondolio nakka tchagui'),
-        CardBiggerFont('Ban mondolio nerio tchagui'),
-        CardBiggerFont('Ban mondolio yop tchagui'),
-        CardBiggerFont('Tuit tchagui'),
-        // 7 GUB
-        CardBiggerFont('Ap bal tuio ap tchagui'),
-        CardBiggerFont('Ap bal tuio an tchagui'),
-        CardBiggerFont('Ap bal tuio yop tchagui'),
-        CardBiggerFont('Tuit bal tuio nagamiô rurio tchagui'),
-        CardBiggerFont('Tuit bal tuio nagamiô dolio tchagui'),
-        CardBiggerFont('Tuit bal tuio nagamiô yop tchagui'),
-        CardBiggerFont('Banderô dolio tchagui'),
-        CardBiggerFont('Banderô an tchagui'),
-        // 6 GUB
-        CardBiggerFont('Dubal dansong an tchagui'),
-        CardBiggerFont('Dubal dansong nerio tchagui'),
-        CardBiggerFont('Dubal dansong dolio tchagui'),
-        CardBiggerFont('Dubal dansong yop tchagui'),
-        CardBiggerFont('Dubal dansong rurio tchagui'),
-        CardBiggerFont('Tuio tuit tchagui'),
-        CardBiggerFont('Tuio mon dolio nerio tchagui'),
-        CardBiggerFont('Natchuô mon dolio rurio tchagô\nMon dolio rurio tchagui'),
-      ],
-    );
+    return ListView.builder(itemCount: _balKiSulMoves.length, itemBuilder: (context, index) {
+      return CardBiggerFont('${_balKiSulMoves[index]}');
+    });
   }
 }
+

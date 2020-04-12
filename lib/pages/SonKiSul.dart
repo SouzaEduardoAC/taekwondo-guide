@@ -3,28 +3,42 @@ import 'package:taekwondoguide/pages/AbstractStructure.dart';
 import 'package:taekwondoguide/widgets/CardBiggerFont.dart';
 
 class SonKiSul extends AbstractStructure {
+  final _sonKiSulMoves = [
+    'Ap sogui an palmõk momtong retchio makki',
+    'Ap sogui momtong retchio makki',
+    'Tuit kubi an palmõk momtong godrô makki',
+    'Tuit kubi han sonnal are makki',
+    'Ap kubi han sonnal olgul makki',
+    'Tuit kubi han sonnal momtong makki',
+    'Tuit kubi are godrô makki',
+    'Tuit kubi an palmõk momtong godrô makki',
+    'Tuit kubi sonnal are godrô makki',
+    'Tuit kubi are godrô makki',
+    'Tuit kubi sonnal makki',
+    'Ap kubi momtong makki',
+    'Tuit kubi dung palmõk momtong makki',
+    'Tuit kubi mit palmõk momtong makki',
+    'Ap kubi djumõk olgul tchirugui',
+    'Ap kubi tchotchiô tchirugui',
+    'Ap kubi olgul barô dolio tchirugui',
+    'Pyõn djumôk opfô barô tchirugui',
+    'Ap kubi pyõn djumõk momtong barô seuô tchirugui',
+    'Ap kubi pyõn djumok barô seuô tchirgui',
+    'Ap kubi pyõn djumok barô tchirgui',
+    'Ap kubi pyõnson kut opfô tchirgui',
+    'Ap kubi jebipfum mok tchigui',
+    'Ap Kubi Pyõng Sonkut Seuô Tchirugui',
+    'Ap kubi jebipfum mok tchigui',
+    'Ap sogui momtong barô tchirugui',
+    'Dubom tchirugui',
+    'Tuit kubidung jumok olgul pakat tchigui',
+    'Tchutchum sogui momtong yop tchirugui'
+  ];
+
   @override
   Widget buildPageBody(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        // 8 GUB
-        CardBiggerFont('Ap sogui an palmõk momtong retchio makkô\nAp kubi djumõk olgul tchirugui'),
-        CardBiggerFont('Ap sogui momtong retchio makkô\nAp kubi tchotchiô tchirugui'),
-        CardBiggerFont('Tuit kubi an palmõk momtong godrô makkô\nAp kubi olgul barô dolio tchirugui'),
-        CardBiggerFont('Tuit kubi han sonnal are makkô\nAp kubi han sonnal olgul makkô\nPyõn djumôk opfô barô tchirugui'),
-        CardBiggerFont('Tuit kubi han sonnal momtong makkô\nAp kubi pyõn djumõk momtong barô seuô tchirugui'),
-        // 7 GUB
-        CardBiggerFont('Tuit kubi are godrô makkô\nAp kubi pyõn djumok barô seuô tchirgui'),
-        CardBiggerFont('Tuit kubi an palmõk momtong godrô makkô\nAp kubi pyõn djumok barô tchirgui'),
-        CardBiggerFont('Tuit kubi sonnal are godrô makkô\nAp kubi pyõnson kut opfô tchirgui'),
-        CardBiggerFont('Tuit kubi are godrô makkô\nAp kubi jebipfum mok tchigui'),
-        // 6 GUB
-        CardBiggerFont('Tuit kubi sonnal makkô\nAp Kubi Pyõng Sonkut Seuô Tchirugui'),
-        CardBiggerFont('Ap kubi jebipfum mok tchigô\nAp sogui momtong barô tchirugui'),
-        CardBiggerFont('Ap kubi momtong makkô\nDubom tchirugui'),
-        CardBiggerFont('Tuit kubi dung palmõk momtong makkô\nTorá\nTuit kubidung jumok olgul pakat tchigui'),
-        CardBiggerFont('Tuit kubi mit palmõk momtong makkô\nTchutchum sogui momtong yop tchirugui')
-      ],
-    );
+    return ListView.builder(itemCount: _sonKiSulMoves.length, itemBuilder: (context, index) {
+      return CardBiggerFont('${_sonKiSulMoves[index]}');
+    });
   }
 }
