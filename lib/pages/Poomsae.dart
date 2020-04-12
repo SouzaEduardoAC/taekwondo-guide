@@ -1,23 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:taekwondoguide/widgets/CustomAppBar.dart';
-import 'package:taekwondoguide/widgets/NavDrawer.dart';
+import 'package:taekwondoguide/pages/AbstractStructure.dart';
 import 'package:taekwondoguide/widgets/PlayerVideoAndPop.dart';
 
-class Poomsae extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: NavDrawer(),
-      appBar: CustomAppBar(),
-      body: _PoomsaeBodyWidget(),
-    );
-  }
-}
-
-class _PoomsaeBodyWidget extends StatelessWidget {
-  _PoomsaeBodyWidget({Key key}) : super(key: key);
+class Poomsae extends AbstractStructure {
   final _biggerFont = const TextStyle(fontSize: 18.0);
-
   final _taegukIlJang = 'assets/videos/1_taeguk_il_jang.mp4';
   final _taegukEeJang = 'assets/videos/2_taeguk_yi_jang.mp4';
   final _taegukSamJang = 'assets/videos/3_taeguk_sam_jang.mp4';
@@ -28,11 +14,7 @@ class _PoomsaeBodyWidget extends StatelessWidget {
   final _taegukPalJang = 'assets/videos/8_taeguk_pal_jang.mp4';
 
   @override
-  Widget build(BuildContext context) {
-    return _buildPoomsaeList(context);
-  }
-
-  Widget _buildPoomsaeList(context) {
+  Widget buildPageBody(BuildContext context) {
     return ListView(
       children: <Widget>[
         _buildCard(context, 'Taeguk Il Jang', _taegukIlJang),

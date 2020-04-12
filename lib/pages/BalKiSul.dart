@@ -1,19 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:taekwondoguide/pages/AbstractStructure.dart';
 import 'package:taekwondoguide/widgets/CardBiggerFont.dart';
-import 'package:taekwondoguide/widgets/CustomAppBar.dart';
-import 'package:taekwondoguide/widgets/NavDrawer.dart';
 
-class BalKiSul extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: NavDrawer(),
-      appBar: CustomAppBar(),
-      body: _buildListView(context),
-    );
-  }
-
-  Widget _buildListView(BuildContext context) {
+class BalKiSul extends AbstractStructure {
+  Widget buildPageBody(BuildContext context) {
     return ListView(
       children: <Widget>[
         // 8 GUB

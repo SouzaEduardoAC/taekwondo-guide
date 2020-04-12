@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:taekwondoguide/pages/Home.dart';
 
-void main() => runApp(_TaekwondoGuide());
+void main() => runApp(TaekwondoGuide());
 
-class _TaekwondoGuide extends StatelessWidget {
+class TaekwondoGuide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

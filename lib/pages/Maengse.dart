@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:taekwondoguide/pages/AbstractStructure.dart';
 import 'package:taekwondoguide/widgets/CardBiggerFont.dart';
-import 'package:taekwondoguide/widgets/CustomAppBar.dart';
-import 'package:taekwondoguide/widgets/NavDrawer.dart';
 
-class Maengse extends StatelessWidget {
+class Maengse extends AbstractStructure {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: NavDrawer(),
-      appBar: CustomAppBar(),
-      body: _buildMangse(context),
-    );
-  }
-
-  Widget _buildMangse(BuildContext context) {
+  Widget buildPageBody(BuildContext context) {
     return ListView(
       children: <Widget>[
         CardBiggerFont('Observar as regras do Taekwondo'),
