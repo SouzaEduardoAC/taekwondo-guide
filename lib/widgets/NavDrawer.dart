@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:handoryu/main.dart';
 import 'package:handoryu/widgets/PoomsaePage.dart';
-import 'package:handoryu/widgets/VideoPlayer.dart';
+import 'package:handoryu/widgets/TestPage.dart';
 
 import 'MaengsePage.dart';
+import 'Video.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -47,7 +48,7 @@ class NavDrawer extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => new VideoPlayerScreen()
+                  builder: (BuildContext context) => new HomePage()
                 )
               );
             }
@@ -58,7 +59,14 @@ class NavDrawer extends StatelessWidget {
                 'Bal ki sul',
                 style: TextStyle(fontSize: 18)
             ),
-            onTap: () => { }
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => new HomePage()
+                    )
+                );
+              }
           ),
           ListTile(
             leading: Icon(Icons.format_list_numbered),
@@ -70,7 +78,7 @@ class NavDrawer extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => new PoonsaePage()
+                  builder: (BuildContext context) => new PoomsaePage()
                 )
               );
             }
