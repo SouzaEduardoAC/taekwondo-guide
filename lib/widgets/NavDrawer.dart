@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:handoryu/widgets/BalKiSulPage.dart';
 import 'package:handoryu/widgets/HomePage.dart';
 import 'package:handoryu/widgets/MaengsePage.dart';
 import 'package:handoryu/widgets/PoomsaePage.dart';
@@ -11,7 +12,7 @@ class NavDrawer extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           _buildListTile(context, Icons.home, 'Home', new HomePage()),
-          _buildListTile(context, Icons.format_strikethrough, 'Bal ki sul', new HomePage()),
+          _buildListTile(context, Icons.format_strikethrough, 'Bal ki sul', new BalKiSulPage()),
           _buildListTile(context, Icons.format_strikethrough, 'Son ki sul', new SonKiSulPage()),
           _buildListTile(context, Icons.format_list_numbered, 'Poomsae', new PoomsaePage()),
           _buildListTile(context, Icons.local_library, 'Maengse', new MaengsePage())
