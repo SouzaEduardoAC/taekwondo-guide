@@ -43,8 +43,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/taekwondo-bond-nederland-korean-martial-arts-combat-sport_Y8x8SyGT.png
-    - assets/images/Taekwondo-Korea-Martial-Arts.png
     - assets/images/korea_taekwondo_flag.png
     - assets/videos/1_taeguk_il_jang.mp4
     - assets/videos/2_taeguk_yi_jang.mp4
