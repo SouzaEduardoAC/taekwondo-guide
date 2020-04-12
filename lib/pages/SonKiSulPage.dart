@@ -16,6 +16,12 @@ class SonKiSulPage extends StatelessWidget {
   Widget _buildListView(BuildContext context) {
     return ListView(
       children: <Widget>[
+        // 8 GUB
+        CardBiggerFont('Ap sogui an palmõk momtong retchio makkô\nAp kubi djumõk olgul tchirugui'),
+        CardBiggerFont('Ap sogui momtong retchio makkô\nAp kubi tchotchiô tchirugui'),
+        CardBiggerFont('Tuit kubi an palmõk momtong godrô makkô\nAp kubi olgul barô dolio tchirugui'),
+        CardBiggerFont('Tuit kubi han sonnal are makkô\nAp kubi han sonnal olgul makkô\nPyõn djumôk opfô barô tchirugui'),
+        CardBiggerFont('Tuit kubi han sonnal momtong makkô\nAp kubi pyõn djumõk momtong barô seuô tchirugui'),
         // 7 GUB
         CardBiggerFont('Tuit kubi are godrô makkô\nAp kubi pyõn djumok barô seuô tchirgui'),
         CardBiggerFont('Tuit kubi an palmõk momtong godrô makkô\nAp kubi pyõn djumok barô tchirgui'),

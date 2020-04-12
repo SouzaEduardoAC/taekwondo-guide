@@ -16,6 +16,17 @@ class BalKiSulPage extends StatelessWidget {
   Widget _buildListView(BuildContext context) {
     return ListView(
       children: <Widget>[
+        // 8 GUB
+        CardBiggerFont('Mondolio rurio tchagui'),
+        CardBiggerFont('Natchuô mondolio rurio tchagui'),
+        CardBiggerFont('Mondolio yop tchagui'),
+        CardBiggerFont('Mondolio nêrio tchagui'),
+        CardBiggerFont('On mondolio yop tchagui'),
+        CardBiggerFont('On mondolio rurio tchagui'),
+        CardBiggerFont('Ban mondolio nakka tchagui'),
+        CardBiggerFont('Ban mondolio nerio tchagui'),
+        CardBiggerFont('Ban mondolio yop tchagui'),
+        CardBiggerFont('Tuit tchagui'),
         // 7 GUB
         CardBiggerFont('Ap bal tuio ap tchagui'),
         CardBiggerFont('Ap bal tuio an tchagui'),
