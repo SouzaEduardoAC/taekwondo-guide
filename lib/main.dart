@@ -8,6 +8,7 @@ class TaekwondoGuide extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Taekwondo Guide',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

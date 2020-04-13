@@ -4,14 +4,14 @@ import 'package:taekwondoguide/widgets/PlayerVideoAndPop.dart';
 
 class Poomsae extends AbstractStructure {
   final _biggerFont = const TextStyle(fontSize: 18.0);
-  final _taegukIlJang = 'assets/videos/1_taeguk_il_jang.mp4';
-  final _taegukEeJang = 'assets/videos/2_taeguk_yi_jang.mp4';
-  final _taegukSamJang = 'assets/videos/3_taeguk_sam_jang.mp4';
-  final _taegukSaJang = 'assets/videos/4_taeguk_sa_jang.mp4';
-  final _taegukOhJang = 'assets/videos/5_taeguk_oh_jang.mp4';
-  final _taegukYukJang = 'assets/videos/6_taeguk_yook_jang.mp4';
-  final _taegukChilJang = 'assets/videos/7_taeguk_chil_jang.mp4';
-  final _taegukPalJang = 'assets/videos/8_taeguk_pal_jang.mp4';
+  final _taegukIlJang = 'www.youtube.com/watch?v=bfO_UUc32dc';
+  final _taegukEeJang = 'https://www.youtube.com/watch?v=a0oo0SsS29U';
+  final _taegukSamJang = 'www.youtube.com/watch?v=S2ofJsatGGg';
+  final _taegukSaJang = 'https://www.youtube.com/watch?v=eSVIFCKH8EA';
+  final _taegukOhJang = 'https://www.youtube.com/watch?v=APu5dDLg6Uc';
+  final _taegukYukJang = 'https://www.youtube.com/watch?v=DSUnv5b06gY';
+  final _taegukChilJang = 'https://www.youtube.com/watch?v=jewGP4sEFv0';
+  final _taegukPalJang = 'https://www.youtube.com/watch?v=8tsVR4cJvRU';
 
   @override
   Widget buildPageBody(BuildContext context) {
@@ -25,14 +25,28 @@ class Poomsae extends AbstractStructure {
         _buildCard(context, 'Taeguk Yuk Jang', _taegukYukJang),
         _buildCard(context, 'Taeguk Chil Jang', _taegukChilJang),
         _buildCard(context, 'Taeguk Pal Jang', _taegukPalJang),
+        _buildCard(context, 'Poomsae Koryo', ''),
+        _buildCard(context, 'Poomsae Keumgang', ''),
+        _buildCard(context, 'Poomsae Taebaek', ''),
+        _buildCard(context, 'Poomsae Pyongwon', ''),
+        _buildCard(context, 'Poomsae Sipjin', ''),
+        _buildCard(context, 'Poomsae Jitae', ''),
+        _buildCard(context, 'Poomsae Chonkwon', ''),
+        _buildCard(context, 'Poomsae Hansu', ''),
+        _buildCard(context, 'Poomsae Ilyeo', ''),
       ],
     );
   }
 
   GestureDetector _buildCard(context, cardText, videoPath) {
     return new GestureDetector(
-        child: Card(child: ListTile(title: Text(cardText, style: _biggerFont))),
+        child: Card(
+            child: ListTile(
+                title: Text(cardText, style: _biggerFont),
+                trailing: Icon(videoPath == '' ? null : Icons.video_library))
+        ),
         onTap: () {
+          if (videoPath == null || videoPath == '') return;
           Navigator.push<PlayerVideoAndPop>(
             context,
             MaterialPageRoute<PlayerVideoAndPop>(

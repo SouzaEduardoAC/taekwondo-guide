@@ -4,6 +4,7 @@ import 'package:taekwondoguide/pages/Home.dart';
 import 'package:taekwondoguide/pages/Maengse.dart';
 import 'package:taekwondoguide/pages/Poomsae.dart';
 import 'package:taekwondoguide/pages/SonKiSul.dart';
+import 'package:taekwondoguide/pages/youtube_test_page.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -15,7 +16,8 @@ class NavDrawer extends StatelessWidget {
           _buildListTile(context, Icons.format_strikethrough, 'Bal ki sul', new BalKiSul()),
           _buildListTile(context, Icons.format_strikethrough, 'Son ki sul', new SonKiSul()),
           _buildListTile(context, Icons.format_list_numbered, 'Poomsae', new Poomsae()),
-          _buildListTile(context, Icons.local_library, 'Maengse', new Maengse())
+          _buildListTile(context, Icons.local_library, 'Maengse', new Maengse()),
+          _buildListTile(context, Icons.access_time, 'Youtube Test Page', new YoutubeTestPage())
         ],
       ),
     );
