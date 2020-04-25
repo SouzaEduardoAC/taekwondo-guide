@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:taekwondoguide/pages/AbstractStructure.dart';
-import 'package:taekwondoguide/widgets/CardBiggerFont.dart';
+import 'package:taekwondoguide/pages/abstract_structure.dart';
+import 'package:taekwondoguide/widgets/card_bigger_font.dart';
 
 class BalKiSul extends AbstractStructure {
-  final _balKiSulMoves = [
+  final _balKiSulCollection = [
     'Murup olio tchigui',
     'Murup dolio tchigui',
     'Ap tchagui',
@@ -55,9 +55,13 @@ class BalKiSul extends AbstractStructure {
   ];
 
   Widget buildPageBody(BuildContext context) {
-    return ListView.builder(itemCount: _balKiSulMoves.length, itemBuilder: (context, index) {
-      return CardBiggerFont('${_balKiSulMoves[index]}');
-    });
+    return Container(
+      padding: EdgeInsets.all(8),
+      child: ListView.builder(
+          itemCount: _balKiSulCollection.length,
+          itemBuilder: (context, index) {
+            return CardBiggerFont('${_balKiSulCollection[index]}');
+          }),
+    );
   }
 }
-

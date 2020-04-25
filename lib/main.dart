@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taekwondoguide/pages/Home.dart';
+import 'package:taekwondoguide/pages/home.dart';
 
 void main() => runApp(TaekwondoGuide());
 

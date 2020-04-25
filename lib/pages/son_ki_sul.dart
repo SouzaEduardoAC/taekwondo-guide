@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:taekwondoguide/pages/AbstractStructure.dart';
-import 'package:taekwondoguide/widgets/CardBiggerFont.dart';
+import 'package:taekwondoguide/pages/abstract_structure.dart';
+import 'package:taekwondoguide/widgets/card_bigger_font.dart';
 
 class SonKiSul extends AbstractStructure {
-  final _sonKiSulMoves = [
+  final _sonKiSulCollection = [
     'Ap sogui an palmõk momtong retchio makki',
     'Ap sogui momtong retchio makki',
     'Tuit kubi an palmõk momtong godrô makki',
@@ -37,8 +37,13 @@ class SonKiSul extends AbstractStructure {
 
   @override
   Widget buildPageBody(BuildContext context) {
-    return ListView.builder(itemCount: _sonKiSulMoves.length, itemBuilder: (context, index) {
-      return CardBiggerFont('${_sonKiSulMoves[index]}');
-    });
+    return Container(
+      padding: EdgeInsets.all(8),
+      child: ListView.builder(
+          itemCount: _sonKiSulCollection.length,
+          itemBuilder: (context, index) {
+            return CardBiggerFont('${_sonKiSulCollection[index]}');
+          }),
+    );
   }
 }

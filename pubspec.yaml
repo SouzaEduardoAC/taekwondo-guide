@@ -19,12 +19,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  video_player: ^0.10.8+1
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  http: ^0.12.0+4
-  youtube_player_flutter: ^6.1.0+4
 
 dev_dependencies:
   flutter_test:
@@ -45,14 +40,6 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/korea_taekwondo_flag.png
-    - assets/videos/1_taeguk_il_jang.mp4
-    - assets/videos/2_taeguk_yi_jang.mp4
-    - assets/videos/3_taeguk_sam_jang.mp4
-    - assets/videos/4_taeguk_sa_jang.mp4
-    - assets/videos/5_taeguk_oh_jang.mp4
-    - assets/videos/6_taeguk_yook_jang.mp4
-    - assets/videos/7_taeguk_chil_jang.mp4
-    - assets/videos/8_taeguk_pal_jang.mp4
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

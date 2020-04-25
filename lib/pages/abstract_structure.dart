@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/CustomAppBar.dart';
-import '../widgets/NavDrawer.dart';
+import 'package:taekwondoguide/widgets/app_bar.dart';
+import 'package:taekwondoguide/widgets/nav_drawer.dart';
 
 abstract class AbstractStructure extends StatelessWidget {
   @override

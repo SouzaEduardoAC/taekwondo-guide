@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CardBiggerFont extends StatelessWidget {
   final _biggerFont = const TextStyle(fontSize: 18.0);
-  String _text;
+  final String _text;
 
   CardBiggerFont(this._text);
 
